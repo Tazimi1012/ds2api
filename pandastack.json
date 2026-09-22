@@ -1,1 +1,6 @@
-
+{
+  "type": "generic",
+  "installCommand": "true",
+  "buildCommand": "bash scripts/pandastack-build.sh",
+  "startCommand": "bash scripts/pandastack-start.sh"
+}
