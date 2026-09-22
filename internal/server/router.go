@@ -117,6 +117,7 @@ func NewApp() (*App, error) {
 	gemini.RegisterRoutes(r, geminiHandler)
 	ollama.RegisterRoutes(r, ollamaHandler)
 	r.Route("/admin", func(ar chi.Router) {
+		ar.Use(adminAuthorizationHeaderCompat)
 		admin.RegisterRoutes(ar, adminHandler)
 	})
 	webui.RegisterRoutes(r, webuiHandler)

@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { I18nProvider } from './i18n'
 import './styles.css'
+import { installAdminAuthHeaderCompat } from './utils/adminAuthHeaderCompat.js'
+
+installAdminAuthHeaderCompat()
 
 const basename = import.meta.env.MODE === 'production' ? '/admin' : '/'
 
